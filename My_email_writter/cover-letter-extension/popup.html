@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cover Letter Generator</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label for="email">Employer Email:</label>
+            <input type="email" id="email" placeholder="Enter employer email" required>
+        </div>
+        <div class="form-group">
+            <label for="job-description">Job Description:</label>
+            <textarea id="job-description" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="word-count">Word Count:</label>
+            <input type="number" id="word-count" value="150" min="50" max="400" required>
+        </div>
+        <div class="form-group">
+            <label for="model">LLM Model:</label>
+            <select id="model">
+                <option value="mistral">Mistral</option>
+                <option value="deepseek">Deepseek</option>
+                <option value="deepseek-llm">Deepseek-LLM</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="cv-upload">CV Upload (Optional):</label>
+            <input type="file" id="cv-upload" accept=".pdf,.docx">
+        </div>
+        <button id="generate-btn">Generate Cover Letter</button>
+        <div id="result" class="preview-area">
+            <em>Preview will appear here after generation.</em>
+        </div>
+    </div>
+    <script src="popup2.js"></script>
+</body>
+</html> 
